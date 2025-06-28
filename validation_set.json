@@ -1,0 +1,142 @@
+[
+  {
+    "query": "Looking for a psychological horror film with supernatural elements and a strong female lead.",
+    "relevant_movies": ["The Babadook", "Gothika", "The Exorcism of Emily Rose", "Janghwa, Hongryeon", "Penny Dreadful", "Crimson Peak"]
+  },
+  {
+    "query": "I want a gritty crime drama that explores corruption, violence, and justice in urban settings.",
+    "relevant_movies": ["American History X", "L.A. Confidential", "Brooklyn's Finest", "Marked for Death", "Harry Brown", "Nightcrawler"]
+  },
+  {
+    "query": "Give me a fantasy or sci-fi movie that involves futuristic or post-apocalyptic worlds.",
+    "relevant_movies": ["Star Trek: Nemesis", "Pandorum", "The Golden Compass", "Titan A.E.", "X-Men: Days of Future Past", "Arrival"]
+  },
+  {
+    "query": "I'm in the mood for a romantic drama set against war or political unrest.",
+    "relevant_movies": ["In the Land of Blood and Honey", "Partition", "Becoming Jane", "Jane Eyre", "The Constant Gardener"]
+  },
+  {
+    "query": "Looking for a film about exorcism, possession, or demonic forces.",
+    "relevant_movies": ["The Rite", "The Exorcism of Emily Rose", "Taste the Blood of Dracula", "Dracula Has Risen from the Grave", "Fallen", "The Devil Bat"]
+  },
+  {
+    "query": "Show me movies about journalists, writers, or people uncovering secrets and conspiracies.",
+    "relevant_movies": ["The Ghost Writer", "The Constant Gardener", "The Interpreter", "L.A. Confidential", "The Game"]
+  },
+  {
+    "query": "I want a feel-good comedy with awkward romance or unexpected love stories.",
+    "relevant_movies": ["Trainwreck", "The Princess Diaries", "Maid in Manhattan", "Failure to Launch", "We're the Millers", "Friends with Kids"]
+  },
+  {
+    "query": "I'm looking for action-packed spy thrillers with political or military intrigue.",
+    "relevant_movies": ["London Has Fallen", "Patriot Games", "The Taking of Pelham 123", "X-Men: Apocalypse", "The Assignment", "Dr. No"]
+  },
+  {
+    "query": "Show me a coming-of-age story or a teen movie with humor and heart.",
+    "relevant_movies": ["13 Going on 30", "The Spectacular Now", "Prom", "We're the Millers", "The Girl Next Door", "Open Season 3"]
+  },
+  {
+    "query": "Movies about mental illness, emotional trauma, or identity struggles.",
+    "relevant_movies": ["Spider", "Peacock", "The Jacket", "Eternal Sunshine of the Spotless Mind", "Gothika", "Nightcrawler"]
+  },
+  {
+    "query": "I want a creepy mystery involving an old house or a haunting.",
+    "relevant_movies": ["House on Haunted Hill", "The Babadook", "Crimson Peak", "Carnival of Souls", "The Ring"]
+  },
+  {
+    "query": "Give me war films or military dramas that show the cost of conflict.",
+    "relevant_movies": ["Hacksaw Ridge", "Three Kings", "La battaglia di Algeri", "Empire of the Sun", "Santa Fe Trail"]
+  },
+  {
+    "query": "Looking for animated or fantasy movies suitable for families and kids.",
+    "relevant_movies": ["Scooby-Doo! And the Legend of the Vampire", "Frozen", "Ella Enchanted", "The Princess Diaries", "Bedtime Stories", "The Simpsons: Hit & Run"]
+  },
+  {
+    "query": "A film where science or technology leads to unexpected consequences.",
+    "relevant_movies": ["Chappie", "Antitrust", "Spider", "Super 8", "Star Trek Into Darkness", "Arrival"]
+  },
+  {
+    "query": "Movies that explore dystopian or oppressive societies and rebellion.",
+    "relevant_movies": ["V: The Final Battle", "Pandorum", "Trainspotting", "The Lord of the Rings: The Two Towers", "X-Men: Days of Future Past", "Children of the Corn"]
+  },
+  {
+    "query": "I want a movie about undercover operations, secret identities, and double-crosses.",
+    "relevant_movies": ["The Assignment", "The Ghost Writer", "The Game", "L.A. Confidential", "London Has Fallen"]
+  },
+  {
+    "query": "Looking for a comedy with absurd humor and a quirky cast of characters.",
+    "relevant_movies": ["Trainwreck", "We're the Millers", "Joe Dirt", "Young Frankenstein", "Super Troopers"]
+  },
+  {
+    "query": "Give me a tragic love story with historical or social barriers.",
+    "relevant_movies": ["Becoming Jane", "Jane Eyre", "Partition", "The Color Purple", "Madrasapattinam"]
+  },
+  {
+    "query": "I want a musical or film with strong musical themes and performances.",
+    "relevant_movies": ["Hair", "Bedtime Stories", "Pump Up the Volume", "Trainwreck", "Ella Enchanted"]
+  },
+  {
+    "query": "Show me a film about an intense psychological game or mind-bending mystery.",
+    "relevant_movies": ["The Game", "Spider", "The Jacket", "Trance", "Eternal Sunshine of the Spotless Mind"]
+  },
+  {
+    "query": "Looking for a dark comedy that involves crime or inappropriate behavior.",
+    "relevant_movies": ["Very Bad Things", "Bad Santa", "Trainwreck", "The Perfect Host", "The Babadook"]
+  },
+  {
+    "query": "I want a movie where someone fights against a powerful system or government.",
+    "relevant_movies": ["La battaglia di Algeri", "Trainspotting", "The Constant Gardener", "Arrival", "Nightcrawler"]
+  },
+  {
+    "query": "Show me sci-fi or action films that explore time, memory, or identity loss.",
+    "relevant_movies": ["The Jacket", "Trance", "Spider", "Arrival", "X-Men: Days of Future Past"]
+  },
+  {
+    "query": "Give me a war or combat film with heroic themes and sacrifice.",
+    "relevant_movies": ["Hacksaw Ridge", "Three Kings", "Empire of the Sun", "Santa Fe Trail", "Malcolm X"]
+  },
+  {
+    "query": "Looking for a horror film that mixes supernatural with psychological terror.",
+    "relevant_movies": ["The Babadook", "Gothika", "Crimson Peak", "The Ring", "Penny Dreadful"]
+  },
+  {
+    "query": "I want a movie featuring vampires or the undead with a horror tone.",
+    "relevant_movies": ["Dracula Has Risen from the Grave", "Taste the Blood of Dracula", "Phantasm", "Carnival of Souls", "The Return of the Living Dead"]
+  },
+  {
+    "query": "Show me an emotional drama about illness, family, and difficult choices.",
+    "relevant_movies": ["My Sister's Keeper", "Peacock", "The Color Purple", "Eternal Sunshine of the Spotless Mind", "Spider"]
+  },
+  {
+    "query": "Looking for a romantic comedy with mistaken identities or fake relationships.",
+    "relevant_movies": ["Maid in Manhattan", "We're the Millers", "The Princess Diaries", "Failure to Launch", "Friends with Kids"]
+  },
+  {
+    "query": "I want a mystery or thriller set in an isolated or confined location.",
+    "relevant_movies": ["Penny Dreadful", "The Jacket", "Pandorum", "The Ghost Writer", "The Babadook"]
+  },
+  {
+    "query": "Give me an animated or family-friendly film with magical elements.",
+    "relevant_movies": ["Frozen", "Ella Enchanted", "Bedtime Stories", "Scooby-Doo! And the Legend of the Vampire", "The Princess Diaries"]
+  },
+  {
+    "query": "Show me a coming-of-age film that involves social awkwardness or youth discovery.",
+    "relevant_movies": ["13 Going on 30", "The Spectacular Now", "Trainwreck", "The Girl Next Door", "Prom"]
+  },
+  {
+    "query": "I'm in the mood for a biographical or historical drama based on real events.",
+    "relevant_movies": ["Malcolm X", "Empire of the Sun", "Hacksaw Ridge", "The Iron Lady", "The Constant Gardener"]
+  },
+  {
+    "query": "Looking for a film about addiction, self-destruction, or personal downfall.",
+    "relevant_movies": ["Trainspotting", "Nightcrawler", "Spider", "Trance", "Very Bad Things"]
+  },
+  {
+    "query": "I want a movie with a female action lead in a supernatural or fantasy world.",
+    "relevant_movies": ["Lara Croft: Tomb Raider", "Ella Enchanted", "Chappie", "Arrival", "Crimson Peak"]
+  },
+  {
+    "query": "Show me a film where a journalist or investigator exposes a major secret.",
+    "relevant_movies": ["The Constant Gardener", "The Interpreter", "The Ghost Writer", "L.A. Confidential", "The Game"]
+  }
+]

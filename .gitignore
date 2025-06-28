@@ -1,4 +1,6 @@
 *.json
 *.zip
+!validation_set.json
 
 final_dataset.csv
+embeddings/

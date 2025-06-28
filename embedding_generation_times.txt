@@ -1,0 +1,12 @@
+Model: all-MiniLM-L12-v2
+  Title embeddings: 224.69 seconds
+  Plot embeddings: 1349.76 seconds
+  Genres embeddings: 229.35 seconds
+  Total time: 1804.65 seconds
+
+Model: multi-qa-distilbert-cos-v1
+  Title embeddings: 254.51 seconds
+  Plot embeddings: 6538.55 seconds
+  Genres embeddings: 382.33 seconds
+  Total time: 7179.21 seconds
+

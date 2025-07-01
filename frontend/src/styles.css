@@ -218,6 +218,12 @@ input::placeholder {
 
 .movie-content {
   padding: 1.5rem;
+  min-height: unset;
+  padding-bottom: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 .movie-header {

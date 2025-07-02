@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import faiss
 from sentence_transformers import SentenceTransformer
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
@@ -12,18 +11,13 @@ models = {
 }
 
 embeddings = {}
+emb_matrices = {}
 for model_name in models:
     emb_path = f"embeddings/embeddings_{model_name.replace('-', '_')}.npy"
     embeddings[model_name] = np.load(emb_path)
     models[model_name] = SentenceTransformer(model_name.replace("_", "-"))
-
-indexes = {}
-for model_name in models:
-    emb_matrix = embeddings[model_name]
-    dimension = emb_matrix.shape[1]
-    index = faiss.IndexFlatIP(dimension)
-    index.add(emb_matrix.astype('float32'))
-    indexes[model_name] = index
+    emb_matrix = embeddings[model_name] / np.linalg.norm(embeddings[model_name], axis=1, keepdims=True)
+    emb_matrices[model_name] = emb_matrix
 
 movie_titles = pd.read_csv("final_dataset.csv")['title'].tolist()
 movie_plots = pd.read_csv("final_dataset.csv")['plot'].tolist()
@@ -48,14 +42,16 @@ app.add_middleware(
 
 @app.get("/")
 async def get_movies(query: str, model_name: str, top_k: int = 5) -> list[dict[str, str | list[str]]]:
-    index = indexes[model_name]
     model = models[model_name]
+    emb_matrix = emb_matrices[model_name]
+
     query_emb = model.encode([query])
-    distances, indices = index.search(query_emb.astype('float32'), top_k)
+    scores = np.dot(emb_matrix, query_emb.T).flatten()
+    top_indices = np.argsort(scores)[-top_k:][::-1]
     return [
         {
             "title": movie_titles[i],
             "plot": movie_plots[i],
             "genres": eval(movie_genres[i]),
-        } for i in indices[0]
+        } for i in top_indices
     ]

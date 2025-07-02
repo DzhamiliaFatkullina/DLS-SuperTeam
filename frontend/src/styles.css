@@ -465,7 +465,18 @@ input::placeholder {
 
 @media (max-width: 768px) {
   .search-box-container {
-    flex-direction: row;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  .results-count,
+  .search-btn {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   .search-btn {

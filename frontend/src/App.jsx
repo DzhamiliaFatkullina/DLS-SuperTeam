@@ -10,8 +10,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isFocused, setIsFocused] = useState(false);
+  const [topK, setTopK] = useState(5);
 
-  const API_URL = "https://4a65-2a0b-4140-d5a0-00-2.ngrok-free.app";
+  const API_URL = "https://58be-2a0b-4140-d5a0-00-2.ngrok-free.app";
 
   const searchMovies = async () => {
     const searchQuery = query.trim();
@@ -25,7 +26,7 @@ function App() {
       const response = await fetch(
         `${API_URL}/?query=${encodeURIComponent(
           searchQuery
-        )}&model_name=all_mpnet_base_v2&top_k=5`
+        )}&model_name=all_mpnet_base_v2&top_k=${topK}`
       );
 
       if (!response.ok) {
@@ -61,7 +62,7 @@ function App() {
 
       <div className="content-container">
         <header>
-          <h1 className="app-title">🎬 FilmFinder</h1>
+          <h1 className="app-title">🎬 MoviePlot Search</h1>
           <p className="app-subtitle">Describe your dream movie in detail</p>
         </header>
 
@@ -77,6 +78,8 @@ function App() {
             }}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
+            topK={topK}
+            setTopK={setTopK}
           />
 
           {isLoading && <Spinner />}

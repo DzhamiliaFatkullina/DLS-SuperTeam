@@ -3,6 +3,7 @@ import SearchBox from "./components/SearchBox";
 import MovieCard from "./components/MovieCard";
 import Spinner from "./components/Spinner";
 import "./styles.css";
+import { API_CONFIG } from './config';
 
 function App() {
   const [query, setQuery] = useState("");
@@ -12,7 +13,7 @@ function App() {
   const [isFocused, setIsFocused] = useState(false);
   const [topK, setTopK] = useState(5);
 
-  const API_URL = "https://9449-138-124-52-53.ngrok-free.app";
+  const API_URL = API_CONFIG.BASE_URL;
 
   const searchMovies = async () => {
     const searchQuery = query.trim();

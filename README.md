@@ -130,12 +130,30 @@ This superior quality far outweighs the initial embedding time, especially consi
 
 
 ### Frontend Set Up
+
+Before running the application, you need to configure the backend `API URL`:
+1. Open `frontend/src/config.js`
+2. Replace the `BASE_URL` with your backend endpoint
+   
+
 | Command          | Description                               |     |
 | ---------------- | ----------------------------------------- | --- |
 | `npm start`      | Launch development server with hot-reload | 🚀  |
 | `npm run build`  | Create optimized production build         | 🏗️  |
 | `npm test`       | Run test suite in interactive watch mode  | 🧪  |
 | `npm run format` | Format code with Prettier (if configured) | 🎨  |
+
+### Backend Set Up
+- Create conda env
+    
+    `conda create --name <env> --file backend/requirements.txt`
+
+- Set up env in your IDE
+- Start server
+  
+  `uvicorn backend.app:app`
+  
+You can now access backend on http://127.0.0.1:8000
 
 ## Limitations and Future Work
 

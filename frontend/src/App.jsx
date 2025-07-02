@@ -12,7 +12,7 @@ function App() {
   const [isFocused, setIsFocused] = useState(false);
   const [topK, setTopK] = useState(5);
 
-  const API_URL = "https://58be-2a0b-4140-d5a0-00-2.ngrok-free.app";
+  const API_URL = "https://9449-138-124-52-53.ngrok-free.app";
 
   const searchMovies = async () => {
     const searchQuery = query.trim();

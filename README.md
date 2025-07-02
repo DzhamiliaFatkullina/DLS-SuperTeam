@@ -117,10 +117,25 @@ This superior quality far outweighs the initial embedding time, especially consi
 
 ## Application Interface
 
+<table>
+  <tr>
+    <td><img src="https://downloader.disk.yandex.ru/preview/8348c4065aab33b12913a4f2cde20473ae52d6a0ab4373b70b4cb8e63d7d9423/686556b8/RFPbOvvxRZ2SAF5wZzYMfY6KwEF0Zw2OEJXxys-9yFLavl4mTflby2cx-ngiO0wWV0laROY-_ATE6BTeE3hBIw%3D%3D?uid=0&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-07-02%20145157.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&size=2048x2048" alt="MoviePlot Search" width="400"/></td>
+    <td><img src="https://downloader.disk.yandex.ru/preview/53f9b7015b443440f9cb5ad203a2613a216d15630c873d7affc821903274ba71/68655701/DlmInTB54Cf5rFRi1_38kO9nVd56r4UxjxQm_-4qF2Tb7uf2ctIh2XYa9UQezAb0Z6F0JOy096z058lf_dbw3A%3D%3D?uid=0&filename=%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202025-07-02%20145235.png&disposition=inline&hash=&limit=0&content_type=image%2Fpng&owner_uid=0&tknv=v3&size=2048x2048" alt="Example of Search" width="400"/></td>
+  </tr>
+</table>
+
 ## Installation & Usage
 > **Note:**  
 > During the presentation, a live demo link will be provided for easy access. Otherwise, to use the application locally, both the backend and frontend need to be run on your computer.
 
+
+### Frontend Set Up
+| Command          | Description                               |     |
+| ---------------- | ----------------------------------------- | --- |
+| `npm start`      | Launch development server with hot-reload | 🚀  |
+| `npm run build`  | Create optimized production build         | 🏗️  |
+| `npm test`       | Run test suite in interactive watch mode  | 🧪  |
+| `npm run format` | Format code with Prettier (if configured) | 🎨  |
 
 ## Limitations and Future Work
 

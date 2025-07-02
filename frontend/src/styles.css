@@ -21,7 +21,7 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   color: var(--text-primary);
   line-height: 1.6;
   background-color: var(--dark);
@@ -32,6 +32,8 @@ body {
   min-height: 100vh;
   position: relative;
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .background-gradient {
@@ -47,9 +49,15 @@ body {
 }
 
 @keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .content-container {
@@ -58,6 +66,7 @@ body {
   padding: 2rem 1.5rem;
   position: relative;
   z-index: 1;
+  flex: 1;
 }
 
 header {
@@ -70,9 +79,9 @@ header {
   font-size: clamp(2rem, 5vw, 3.5rem);
   margin-bottom: 0.5rem;
   background: linear-gradient(
-    135deg, 
-    var(--title-gradient-1) 0%, 
-    var(--title-gradient-2) 50%, 
+    135deg,
+    var(--title-gradient-1) 0%,
+    var(--title-gradient-2) 50%,
     var(--title-gradient-3) 100%
   );
   -webkit-background-clip: text;
@@ -86,12 +95,16 @@ header {
 }
 
 @keyframes titleGlow {
-  0% { opacity: 0.95; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .app-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 10%;
@@ -133,7 +146,7 @@ header {
 }
 
 .results-count::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   right: 15px;
@@ -194,7 +207,7 @@ header {
 
 input {
   width: 100%;
-  padding: 1rem 1.25rem;
+  padding: 15px 40px 12px 16px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 12px;
   font-size: 1rem;
@@ -399,11 +412,13 @@ input::placeholder {
 }
 
 @keyframes bounce {
-  0%, 80%, 100% { 
+  0%,
+  80%,
+  100% {
     transform: translateY(0);
     opacity: 0.5;
   }
-  40% { 
+  40% {
     transform: translateY(-15px);
     opacity: 1;
   }
@@ -422,23 +437,27 @@ input::placeholder {
 
 .app-footer {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: auto;
   color: var(--text-secondary);
   font-size: 0.9rem;
   padding: 1rem;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeInUp {
-  from { 
+  from {
     opacity: 0;
     transform: translateY(20px);
   }
-  to { 
+  to {
     opacity: 1;
     transform: translateY(0);
   }
@@ -448,20 +467,20 @@ input::placeholder {
   .search-box-container {
     flex-direction: row;
   }
-  
+
   .search-btn {
     padding: 0.8rem;
     justify-content: center;
   }
-  
+
   .content-container {
     padding: 1.5rem 1rem;
   }
-  
+
   .app-title {
     font-size: clamp(1.8rem, 6vw, 3rem);
   }
-  
+
   .count-select {
     padding: 0.8rem 1.2rem 0.8rem 0.8rem;
   }

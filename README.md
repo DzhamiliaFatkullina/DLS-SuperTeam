@@ -1,5 +1,4 @@
-## Introduction
-
+# MoviePlot Search: A Semantic Movie Discovery Engine
 ## Introduction
 
 This project introduces a semantic search engine that helps users find movies by describing themes, storylines, or plot elements in natural language—for example, *"a post-apocalyptic world where AI controls humans."*
@@ -31,13 +30,16 @@ For this project, we combined data from four high-quality datasets that include 
 
 The resulting dataset contains over **50,000** movies from various sources worldwide, with clean and consistent information on plots, titles, and genres. This unified dataset serves as the foundation for training and evaluating our semantic search engine.
 
-### Source Datasets
+### **Source Datasets**  
+| Dataset | Link |  
+|---------|------|  
+| Top Rated Movies | [Kaggle](https://www.kaggle.com/datasets/suvroo/top-rated-movies-89807) |  
+| Movie Plot Dataset (100K) | [Kaggle](https://www.kaggle.com/datasets/sidhantyadav/movie-plot-dataset-with-100k-movies-plots) |  
+| Wikipedia Movie Plots | [Kaggle](https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots) |  
+| CMU Movie Summary Corpus | [PapersWithCode](https://paperswithcode.com/dataset/cmu-movie-summary-corpus) |  
+| Millions of Movies (genre imputation) | [Kaggle](https://www.kaggle.com/datasets/akshaypawar7/millions-of-movies) |  
 
-- [Top Rated Movies](https://www.kaggle.com/datasets/suvroo/top-rated-movies-89807)
-- [Movie Plot Dataset with 100K Plots](https://www.kaggle.com/datasets/sidhantyadav/movie-plot-dataset-with-100k-movies-plots)
-- [Wikipedia Movie Plots](https://www.kaggle.com/datasets/jrobischon/wikipedia-movie-plots)
-- [CMU Movie Summary Corpus](https://paperswithcode.com/dataset/cmu-movie-summary-corpus)
-- [Millions of Movies](https://www.kaggle.com/datasets/akshaypawar7/millions-of-movies) *(used for genre imputation and to extend dataset)* 
+---
 
 These datasets are also listed in the References section.
 

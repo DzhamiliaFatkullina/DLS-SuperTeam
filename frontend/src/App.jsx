@@ -10,36 +10,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [isFocused, setIsFocused] = useState(false);
+  const [topK, setTopK] = useState(5);
 
-  const movieDatabase = [
-    {
-      title: "The Matrix",
-      genre: "Sci-Fi, Action",
-      plot: "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
-    },
-    {
-      title: "Blade Runner 2049",
-      genre: "Sci-Fi, Drama",
-      plot: "A young blade runner's discovery of a long-buried secret leads him to track down former blade runner Rick Deckard, who's been missing for thirty years.",
-    },
-    {
-      title: "Ex Machina",
-      genre: "Sci-Fi, Thriller",
-      plot: "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a highly advanced humanoid A.I.",
-    },
-    {
-      title: "Her",
-      genre: "Sci-Fi, Romance",
-      plot: "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
-    },
-    {
-      title: "The Terminator",
-      genre: "Sci-Fi, Action",
-      plot: "A human soldier is sent from 2029 to 1984 to stop an almost indestructible cyborg killing machine, sent from the same year, which has been programmed to execute a young woman whose unborn son is the key to humanity's future salvation.",
-    },
-  ];
+  const API_URL = "https://58be-2a0b-4140-d5a0-00-2.ngrok-free.app";
 
-  const searchMovies = () => {
+  const searchMovies = async () => {
     const searchQuery = query.trim();
     if (!searchQuery) return;
 
@@ -47,30 +22,38 @@ function App() {
     setMovies([]);
     setError(null);
 
-    setTimeout(() => {
-      try {
-        const matchedMovies = movieDatabase
-          .filter(
-            (movie) =>
-              movie.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              movie.plot.toLowerCase().includes(searchQuery.toLowerCase()) ||
-              movie.genre.toLowerCase().includes(searchQuery.toLowerCase())
-          )
-          .slice(0, 5);
+    try {
+      const response = await fetch(
+        `${API_URL}/?query=${encodeURIComponent(
+          searchQuery
+        )}&model_name=all_mpnet_base_v2&top_k=${topK}`
+      );
 
-        if (matchedMovies.length === 0) {
-          setError(
-            'No movies found. Try different keywords like "sci-fi robots" or "romantic comedy"'
-          );
-        } else {
-          setMovies(matchedMovies);
-        }
-      } catch (err) {
-        setError("Search error. Please try again.");
-      } finally {
-        setIsLoading(false);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
       }
-    }, 1000);
+
+      const data = await response.json();
+
+      if (data.length === 0) {
+        setError(
+          'No movies found. Try different keywords like "sci-fi robots" or "romantic comedy"'
+        );
+      } else {
+        const validatedMovies = data.map((movie) => ({
+          title: movie.title || "Unknown title",
+          genres: movie.genres || [],
+          plot: movie.plot || "No description available",
+        }));
+        console.log(validatedMovies[0].genres);
+        setMovies(validatedMovies);
+      }
+    } catch (err) {
+      setError("Search error. Please try again.");
+      console.error("Error fetching movies:", err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -79,7 +62,7 @@ function App() {
 
       <div className="content-container">
         <header>
-          <h1 className="app-title">🎬 FilmFinder</h1>
+          <h1 className="app-title">🎬 MoviePlot Search</h1>
           <p className="app-subtitle">Describe your dream movie in detail</p>
         </header>
 
@@ -95,6 +78,8 @@ function App() {
             }}
             onFocus={() => setIsFocused(true)}
             onBlur={() => setIsFocused(false)}
+            topK={topK}
+            setTopK={setTopK}
           />
 
           {isLoading && <Spinner />}
@@ -106,7 +91,7 @@ function App() {
               <MovieCard
                 key={index}
                 title={movie.title}
-                genre={movie.genre}
+                genres={movie.genres}
                 plot={movie.plot}
               />
             ))}

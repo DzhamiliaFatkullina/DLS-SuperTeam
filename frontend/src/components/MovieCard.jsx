@@ -1,4 +1,6 @@
-const MovieCard = ({ title, genre, plot, year, rating }) => {
+const MovieCard = ({ title = "", genres = [], plot = "" }) => {
+  const nonEmptyGenres = genres.filter(genre => genre.trim() !== "");
+
   const generatePoster = (title) => {
     const colors = ['#FF6B6B', '#48DBFB', '#6BCB77', '#FAA2C1', '#FFD166'];
     const color = colors[title.length % colors.length];
@@ -20,11 +22,13 @@ const MovieCard = ({ title, genre, plot, year, rating }) => {
           <h3>{title}</h3>
         </div>
         
-        <div className="genre-tags">
-          {genre.split(', ').map((g, i) => (
-            <span key={i} className="genre-tag">{g.trim()}</span>
-          ))}
-        </div>
+        {nonEmptyGenres.length > 0 && (
+          <div className="genre-tags">
+            {nonEmptyGenres.map((g, i) => (
+              <span key={i} className="genre-tag">{g.trim()}</span>
+            ))}
+          </div>
+        )}
         
         <p className="movie-plot">{plot}</p>
       </div>
